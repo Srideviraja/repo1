@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks: 
+  - name: Give insecure permissions to an existing file
+    file: 
+      path: file1.txt
+      owner: ec2-user
+      group: ec2-user
+      mode: '1777'
+      state: touch
